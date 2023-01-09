@@ -1,7 +1,7 @@
 package com.agg.codechallenge.application.ui.mappers
 
 import com.agg.codechallenge.application.ui.responses.BugTrackerResponse
-import com.agg.codechallenge.domain.bugtracker.BugTracker
+import com.agg.codechallenge.domain.BugTracker
 import com.agg.codechallenge.infrastructure.repositories.model.BugTrackerModel
 
 

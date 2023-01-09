@@ -1,7 +1,7 @@
 package com.agg.codechallenge.infrastructure.repositories.model
 
-import com.agg.codechallenge.domain.bugtracker.Severity
-import com.agg.codechallenge.domain.bugtracker.Status
+import com.agg.codechallenge.domain.Severity
+import com.agg.codechallenge.domain.Status
 import org.hibernate.annotations.Type
 import java.time.LocalDateTime
 import java.util.*

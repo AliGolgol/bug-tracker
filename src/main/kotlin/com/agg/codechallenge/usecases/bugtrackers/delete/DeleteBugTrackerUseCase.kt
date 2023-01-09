@@ -1,6 +1,6 @@
 package com.agg.codechallenge.usecases.bugtrackers.delete
 
-import com.agg.codechallenge.domain.bugtracker.exceptions.BugTrackerNotFoundException
+import com.agg.codechallenge.domain.exceptions.BugTrackerNotFoundException
 import com.agg.codechallenge.infrastructure.repositories.H2Repository
 import org.springframework.stereotype.Service
 import java.util.*

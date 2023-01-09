@@ -1,4 +1,4 @@
-package com.agg.codechallenge.domain.bugtracker
+package com.agg.codechallenge.domain
 
 import com.agg.codechallenge.usecases.bugtrackers.create.CreateBugTrackerCommand
 import com.agg.codechallenge.usecases.bugtrackers.update.UpdateBugTrackerCommand

@@ -1,6 +1,6 @@
 package com.agg.codechallenge.usecases.bugtrackers.find
 
-import com.agg.codechallenge.domain.bugtracker.exceptions.BugTrackerNotFoundException
+import com.agg.codechallenge.domain.exceptions.BugTrackerNotFoundException
 import com.agg.codechallenge.helper.DataSample.createBugTrackerModel
 import com.agg.codechallenge.infrastructure.repositories.H2Repository
 import org.assertj.core.api.Assertions.assertThat

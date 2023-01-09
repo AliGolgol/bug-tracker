@@ -1,4 +1,4 @@
-package com.agg.codechallenge.domain.bugtracker
+package com.agg.codechallenge.domain
 
 enum class Severity {
     LOW, NONE, MAJOR, MEDIUM,

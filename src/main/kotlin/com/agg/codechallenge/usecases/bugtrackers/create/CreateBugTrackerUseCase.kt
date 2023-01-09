@@ -1,6 +1,6 @@
 package com.agg.codechallenge.usecases.bugtrackers.create
 
-import com.agg.codechallenge.domain.bugtracker.BugTracker
+import com.agg.codechallenge.domain.BugTracker
 import com.agg.codechallenge.infrastructure.repositories.H2Repository
 import com.agg.codechallenge.infrastructure.repositories.model.BugTrackerModel
 import org.springframework.stereotype.Service

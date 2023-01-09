@@ -2,7 +2,7 @@ package com.agg.codechallenge.application.ui
 
 import com.agg.codechallenge.application.ui.responses.share.ApiError
 import com.agg.codechallenge.application.ui.responses.share.ApiErrors
-import com.agg.codechallenge.domain.bugtracker.exceptions.BugTrackerNotFoundException
+import com.agg.codechallenge.domain.exceptions.BugTrackerNotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.MessageSource

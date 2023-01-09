@@ -1,7 +1,7 @@
 package com.agg.codechallenge.usecases.bugtrackers.create
 
-import com.agg.codechallenge.domain.bugtracker.Severity.MEDIUM
-import com.agg.codechallenge.domain.bugtracker.Status.OPEN
+import com.agg.codechallenge.domain.Severity.MEDIUM
+import com.agg.codechallenge.domain.Status.OPEN
 import com.agg.codechallenge.helper.DataSample.createBugTrackerRequest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

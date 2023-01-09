@@ -1,6 +1,6 @@
 package com.agg.codechallenge.usecases.bugtrackers.update
 
-import com.agg.codechallenge.domain.bugtracker.exceptions.BugTrackerNotFoundException
+import com.agg.codechallenge.domain.exceptions.BugTrackerNotFoundException
 import com.agg.codechallenge.helper.DataSample.createUpdateRequest
 import com.agg.codechallenge.infrastructure.repositories.H2Repository
 import org.junit.jupiter.api.Test

@@ -1,7 +1,7 @@
 package com.agg.codechallenge.usecases.bugtrackers.update
 
-import com.agg.codechallenge.domain.bugtracker.BugTracker
-import com.agg.codechallenge.domain.bugtracker.exceptions.BugTrackerNotFoundException
+import com.agg.codechallenge.domain.BugTracker
+import com.agg.codechallenge.domain.exceptions.BugTrackerNotFoundException
 import com.agg.codechallenge.infrastructure.repositories.H2Repository
 import com.agg.codechallenge.infrastructure.repositories.model.BugTrackerModel
 import org.springframework.stereotype.Service

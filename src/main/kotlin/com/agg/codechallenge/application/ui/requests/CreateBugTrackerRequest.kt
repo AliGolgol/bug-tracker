@@ -1,7 +1,7 @@
 package com.agg.codechallenge.application.ui.requests
 
-import com.agg.codechallenge.domain.bugtracker.Severity
-import com.agg.codechallenge.domain.bugtracker.Status
+import com.agg.codechallenge.domain.Severity
+import com.agg.codechallenge.domain.Status
 import java.time.LocalDateTime
 
 data class CreateBugTrackerRequest(
