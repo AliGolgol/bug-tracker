@@ -1,14 +1,14 @@
 package com.agg.codechallenge.application.ui
 
+import com.agg.codechallenge.helper.DataSample.createUpdateRequest
+import com.agg.codechallenge.helper.DataSample.createdPayload
+import com.agg.codechallenge.helper.DataSample.updatedPayload
 import com.agg.codechallenge.infrastructure.repositories.model.BugTrackerModel
 import com.agg.codechallenge.usecases.bugtrackers.create.CreateBugTrackerUseCase
 import com.agg.codechallenge.usecases.bugtrackers.delete.DeleteBugTrackerUseCase
 import com.agg.codechallenge.usecases.bugtrackers.find.FindBugTrackerUseCase
 import com.agg.codechallenge.usecases.bugtrackers.update.UpdateBugTrackerCommand
 import com.agg.codechallenge.usecases.bugtrackers.update.UpdateBugTrackerUseCase
-import com.agg.codechallenge.helper.DataSample.createUpdateRequest
-import com.agg.codechallenge.helper.DataSample.createdPayload
-import com.agg.codechallenge.helper.DataSample.updatedPayload
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -51,7 +51,6 @@ internal class BugTrackerEndPointTest {
         mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build()
     }
 
-
     @Test
     fun `create should return 201 status when a bug tracker is created`() {
         whenever(createBugTrackerUseCase.create(any())).thenReturn(UUID.randomUUID())
@@ -64,7 +63,20 @@ internal class BugTrackerEndPointTest {
     }
 
     @Test
-    fun `finds should return 200 with the existing bug tracker`() {
+    fun `finds should return 200 for given id`() {
+        val bugTracker = BugTrackerModel()
+        whenever(findBugTrackerUseCase.findAll()).thenReturn(listOf(bugTracker))
+        whenever(findBugTrackerUseCase.findById(bugTracker.id)).thenReturn(bugTracker)
+
+        mvc.perform(
+            MockMvcRequestBuilders.get(BASE_URI + "/findById?id=${bugTracker.id}")
+                .contentType(MediaType.APPLICATION_JSON)
+                .characterEncoding("utf-8")
+        ).andExpect(MockMvcResultMatchers.status().`is`(HttpStatus.OK.value()))
+    }
+
+    @Test
+    fun `finds should return 200 with the existing bug trackers`() {
         val bugTracker = BugTrackerModel()
         whenever(findBugTrackerUseCase.findAll()).thenReturn(listOf(bugTracker))
         whenever(findBugTrackerUseCase.findById(bugTracker.id)).thenReturn(bugTracker)
@@ -75,11 +87,6 @@ internal class BugTrackerEndPointTest {
                 .characterEncoding("utf-8")
         ).andExpect(MockMvcResultMatchers.status().`is`(HttpStatus.OK.value()))
 
-        mvc.perform(
-            MockMvcRequestBuilders.get(BASE_URI + "/findById?id=${bugTracker.id}")
-                .contentType(MediaType.APPLICATION_JSON)
-                .characterEncoding("utf-8")
-        ).andExpect(MockMvcResultMatchers.status().`is`(HttpStatus.OK.value()))
     }
 
     @Test
